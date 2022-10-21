@@ -1,0 +1,123 @@
+import { SectionListData } from 'react-native';
+
+export type Section =
+  SectionListData<
+    { firstName: string, email: string },
+    { sectionName: string }
+  >;
+
+export const sections: Section[] = [
+  {
+    sectionName: 'A',
+    data: [
+      { firstName: 'Abigail', email: 'abigail@example.com' },
+      { firstName: 'Adam', email: 'adam@example.com' },
+      { firstName: 'Adrian', email: 'adrian@example.com' },
+      { firstName: 'Aiden', email: 'aiden@example.com' },
+      { firstName: 'Alice', email: 'alice@example.com' },
+      { firstName: 'Amelia', email: 'amelia@example.com' },
+      { firstName: 'Andrew', email: 'andrew@example.com' },
+      { firstName: 'Anthony', email: 'anthony@example.com' },
+      { firstName: 'Aria', email: 'aria@example.com' },
+      { firstName: 'Audrey', email: 'audrey@example.com' },
+      { firstName: 'Axel', email: 'axel@example.com' },
+    ],
+  },
+  {
+    sectionName: 'B',
+    data: [
+      { firstName: 'Beau', email: 'beau@example.com' },
+      { firstName: 'Bella', email: 'bella@example.com' },
+      { firstName: 'Benjamin', email: 'benjamin@example.com' },
+      { firstName: 'Bennet', email: 'bennet@example.com' },
+      { firstName: 'Bentley', email: 'bentley@example.com' },
+      { firstName: 'Blake', email: 'blake@example.com' },
+      { firstName: 'Brooks', email: 'brooks@example.com' },
+      { firstName: 'Bryce', email: 'bryce@example.com' },
+    ],
+  },
+  {
+    sectionName: 'C',
+    data: [
+      { firstName: 'Cameron', email: 'cameron@example.com' },
+      { firstName: 'Camila', email: 'camila@example.com' },
+      { firstName: 'Caroline', email: 'caroline@example.com' },
+      { firstName: 'Carter', email: 'carter@example.com' },
+      { firstName: 'Charlie', email: 'charlie@example.com' },
+      { firstName: 'Charlotte', email: 'charlotte@example.com' },
+      { firstName: 'Christopher', email: 'christopher@example.com' },
+      { firstName: 'Connor', email: 'connor@example.com' },
+      { firstName: 'Cooper', email: 'cooper@example.com' },
+      { firstName: 'Cora', email: 'cora@example.com' },
+    ],
+  },
+  {
+    sectionName: 'D',
+    data: [
+      { firstName: 'Daisy', email: 'daisy@example.com' },
+      { firstName: 'Dakota', email: 'dakota@example.com' },
+      { firstName: 'Dallas', email: 'dallas@example.com' },
+      { firstName: 'Damian', email: 'damian@example.com' },
+      { firstName: 'Daniel', email: 'daniel@example.com' },
+      { firstName: 'Daniela', email: 'daniela@example.com' },
+      { firstName: 'Daphne', email: 'daphne@example.com' },
+      { firstName: 'David', email: 'david@example.com' },
+      { firstName: 'Dawson', email: 'dawson@example.com' },
+      { firstName: 'Dean', email: 'dean@example.com' },
+      { firstName: 'Delilah', email: 'delilah@example.com' },
+      { firstName: 'Derek', email: 'derek@example.com' },
+      { firstName: 'Diana', email: 'diana@example.com' },
+      { firstName: 'Diego', email: 'diego@example.com' },
+      { firstName: 'Dominic', email: 'dominic@example.com' },
+      { firstName: 'Dylan', email: 'dylan@example.com' },
+    ],
+  },
+  {
+    sectionName: 'E',
+    data: [
+      { firstName: 'Easton', email: 'easton@example.com' },
+      { firstName: 'Elena', email: 'elena@example.com' },
+      { firstName: 'Eli', email: 'eli@example.com' },
+      { firstName: 'Elijah', email: 'elijah@example.com' },
+      { firstName: 'Ella', email: 'ella@example.com' },
+      { firstName: 'Emily', email: 'emily@example.com' },
+      { firstName: 'Emma', email: 'emma@example.com' },
+      { firstName: 'Emmet', email: 'emmet@example.com' },
+      { firstName: 'Evelyn', email: 'evelyn@example.com' },
+      { firstName: 'Everett', email: 'everett@example.com' },
+      { firstName: 'Ezra', email: 'ezra@example.com' },
+    ],
+  },
+  {
+    sectionName: 'F',
+    data: [
+      { firstName: 'Fabian', email: 'fabian@example.com' },
+      { firstName: 'Fatima', email: 'fatima@example.com' },
+      { firstName: 'Finn', email: 'finn@example.com' },
+      { firstName: 'Fiona', email: 'fiona@example.com' },
+      { firstName: 'Ford', email: 'ford@example.com' },
+      { firstName: 'Forrest', email: 'forrest@example.com' },
+      { firstName: 'Frances', email: 'frances@example.com' },
+      { firstName: 'Frank', email: 'frank@example.com' },
+      { firstName: 'Frankie', email: 'frankie@example.com' },
+      { firstName: 'Freya', email: 'freya@example.com' },
+    ],
+  },
+  {
+    sectionName: 'G',
+    data: [
+      { firstName: 'Gabriel', email: 'gabriel@example.com' },
+      { firstName: 'Gael', email: 'gael@example.com' },
+      { firstName: 'Gavin', email: 'gavin@example.com' },
+      { firstName: 'Gemma', email: 'gemma@example.com' },
+      { firstName: 'George', email: 'george@example.com' },
+      { firstName: 'Georgia', email: 'georgia@example.com' },
+      { firstName: 'Grace', email: 'grace@example.com' },
+      { firstName: 'Gracie', email: 'gracie@example.com' },
+      { firstName: 'Graham', email: 'graham@example.com' },
+      { firstName: 'Grant', email: 'grant@example.com' },
+      { firstName: 'Grayson', email: 'grayson@example.com' },
+      { firstName: 'Griffin', email: 'griffin@example.com' },
+    ],
+  },
+];
