@@ -1,41 +1,23 @@
-import React, { useRef } from 'react';
-import { FlatList, Button, SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, View, ViewStyle, SectionList } from 'react-native';
-import { sections } from './utils/sectionsData';
+import React from 'react';
+
+import {
+  StyleSheet,
+  View,
+} from 'react-native';
 
 const styles = StyleSheet.create({
-  item: { padding: 5, flexDirection: 'row', justifyContent: 'space-between' },
-  itemText: { fontSize: 16 },
-  header: { padding: 5, backgroundColor: 'grey' },
-  headerText: { fontSize: 24, color: 'white', fontWeight: 'bold' },
+  root: {
+    backgroundColor: '#1893F8',
+    height: '100%',
+    width : '100%'
+  },
 });
 
-export default function App() {
+const App = () => {
   return (
-    <SafeAreaView style={{ flex: 1 }}>
-      <StatusBar hidden />
-
-      <SectionList
-        keyExtractor={(item, index) => item.email}
-        stickySectionHeadersEnabled={true}
-        sections={sections}
-        renderItem={({ item, index, section }) => {
-          return (
-            <View style={styles.item}>
-              <Text style={styles.itemText}>{item.firstName}</Text>
-              <Text style={styles.itemText}>{item.email}</Text>
-            </View>
-          );
-        }}
-        renderSectionHeader={({ section }) => {
-          return (
-            <View style={styles.header}>
-              <Text style={styles.headerText}>
-                {section.sectionName}
-              </Text>
-            </View>
-          )
-        }}
-      />
-    </SafeAreaView>
+    <View style={styles.root}>
+    </View>
   );
-}
+};
+
+export default App;
