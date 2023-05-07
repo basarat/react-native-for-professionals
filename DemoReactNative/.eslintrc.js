@@ -3,10 +3,10 @@ module.exports = {
   extends: '@react-native-community',
   rules: {
     // disable prettier
-    'prettier/prettier': false,
+    'prettier/prettier': 0,
     // allow inline styles
-    'react-native/no-inline-styles': false,
+    'react-native/no-inline-styles': 0,
     // eol not required
-    'eol-last': false,
+    'eol-last': 0,
   },
 };
