@@ -6,31 +6,53 @@ import {
   Text,
   View,
 } from 'react-native';
-import { Column, Row } from './Layout';
 
 const styles = StyleSheet.create({
-  root: {
+  appRoot: {
+    flex: 1,
     backgroundColor: '#1893F8',
-    height: '100%',
-    width : '100%',
+  },
+  //p
+  viewRoot: {
+    flex: 1,
+    paddingLeft: 50,
+    paddingRight: 50,
+  },
+  //p
+  text: {
+    fontSize: 15,
+    color: '#FFFFFF',
   },
 });
 
+import { Column, Row } from './Layout';
+import { Board } from './Board';
+import { Status } from './Status';
+import { Button } from './Button';
+import { BoardStatus, BoardValue } from './types';
+import { useGameState } from './AppState';
+
 const App = () => {
+  const {
+    boardValue,
+    step,
+    boardStatus,
+    handleSquarePress,
+    handleReset,
+  } = useGameState();
+
   return (
-    <SafeAreaView style={styles.root}>
-      <Column gap={50}>
-        <Row gap={20}>
-          <Text>AlphaOne</Text>
-          <Text>BetaOne</Text>
-          <Text>GammaOne</Text>
-        </Row>
-        <Row gap={40}>
-          <Text>AlphaTwo</Text>
-          <Text>BetaTwo</Text>
-          <Text>GammaTwo</Text>
-        </Row>
-      </Column>
+    <SafeAreaView style={styles.appRoot}>
+      <View style={styles.viewRoot}>
+        <Column gap={50}>
+          <Button text="RESTART" disabled={step === 0} onPress={handleReset} />
+          <Status boardStatus={boardStatus} />
+          <Board
+            onSquarePress={handleSquarePress}
+            boardValue={boardValue}
+          />
+        </Column>
+      </View>
     </SafeAreaView>
   );
 };

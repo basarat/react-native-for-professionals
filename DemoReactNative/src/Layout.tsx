@@ -1,22 +1,29 @@
 import React from 'react';
 import { memo } from 'react';
-import { View } from 'react-native';
+import { View, ViewStyle } from 'react-native';
 
 export type LayoutProps = React.PropsWithChildren<{
-  gap: number
+  gap: number,
+  styles?: ViewStyle,
 }>;
 
-export const Row = memo(({ gap, children }: LayoutProps) => {
+export const Row = memo(({ gap, children, styles }: LayoutProps) => {
   return (
-    <View style={{ display: 'flex', flexDirection: 'row', gap: gap }}>
+    <View style={[
+      { display: 'flex', flexDirection: 'row', gap: gap },
+      styles,
+    ]}>
       {children}
     </View>
   );
 });
 
-export const Column = memo(({ gap, children }: LayoutProps) => {
+export const Column = memo(({ gap, children, styles }: LayoutProps) => {
   return (
-    <View style={{ display: 'flex', flexDirection: 'column', gap: gap }}>
+    <View style={[
+      { display: 'flex', flexDirection: 'column', gap: gap },
+      styles,
+    ]}>
       {children}
     </View>
   );
